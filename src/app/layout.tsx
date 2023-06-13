@@ -1,9 +1,21 @@
+/* FONTES */
 import { ReactNode } from 'react'
 import './globals.css'
 import {
   Roboto_Flex as Roboto,
   Bai_Jamjuree as BaiJamjuree,
 } from 'next/font/google'
+
+/* LAYOUT */
+import { Navbar } from '@/components/Navbar'
+import { Hero } from '@/components/Hero'
+
+/* Import Background */
+import { Round } from '@/components/RoundDesigns/Round'
+import { RoundFive } from '@/components/RoundDesigns/RoundFive'
+import { RoundFour } from '@/components/RoundDesigns/RoundFour'
+import { RoundThree } from '@/components/RoundDesigns/RoundThree'
+import { RoundTwo } from '@/components/RoundDesigns/RoundTwo'
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 
@@ -24,7 +36,29 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${roboto.variable} ${baiJamjuree.variable} bg-gray-900 font-sans text-gray-100`}
       >
-        {children}
+        <div className="relative h-screen w-full overflow-hidden font-bold text-textColor">
+          <main className="mx-auto flex h-full max-w-screen-2xl items-center justify-center">
+            <div className="z-50 flex h-[85%] w-[85%] items-start justify-between bg-transparent text-white">
+              {/* Navbar */}
+              <Navbar />
+              <div className="flex h-full w-[94%] items-center bg-transparent ">
+                {/* Parte direita do portfólio */}
+                <Hero />
+                {/* Parte esquerda do portfólio */}
+                <div className="h-[95%] w-8/12 bg-[#0e1]">{children}</div>
+              </div>
+            </div>
+          </main>
+
+          {/* Background  */}
+          <div className="absolute left-0 top-0 z-10 h-full w-full">
+            <Round />
+            <RoundTwo />
+            <RoundThree />
+            <RoundFour />
+            <RoundFive />
+          </div>
+        </div>
       </body>
     </html>
   )
