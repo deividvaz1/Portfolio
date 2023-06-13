@@ -1,3 +1,11 @@
+import { AboutMe } from './AboutMe'
+import { Title } from './Title'
+
 export function About() {
-  return <h1>Sobre</h1>
+  return (
+    <section id="about" className="w-full">
+      <Title title="About" subTitle="Me" />
+      <AboutMe />
+    </section>
+  )
 }

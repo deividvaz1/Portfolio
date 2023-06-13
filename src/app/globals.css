@@ -16,10 +16,19 @@
  }
 
  .borderLeft {
-@apply border-l-[1px] border-l-zinc-800
+@apply border-l-[1px] border-l-zinc-800 
  }
 
  .borderAll {
 @apply border-[1px] border-zinc-800
+ }
+
+ /*Sobre css*/
+ .aboutRightLi {
+ @apply text-zinc-400 text-base font-normal flex justify-between items-center border-b-[1px] border-gray-800 py-2;
+ }
+
+ .aboutRightLiSpan {
+ @apply bg-designColor text-black uppercase px-4 py-[1px] rounded-md;
  }
 }

@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 {/* Parte direita do portfólio */}
                 <Hero />
                 {/* Parte esquerda do portfólio */}
-                <div className="h-[95%] w-8/12 bg-[#0e1]">{children}</div>
+                <div className="h-[95%] w-8/12 bg-bodyColor">{children}</div>
               </div>
             </div>
           </main>
