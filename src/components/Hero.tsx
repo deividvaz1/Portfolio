@@ -28,7 +28,7 @@ export function Hero() {
         {/* informações */}
         <div className="flex flex-col items-center gap-2 py-10">
           <h1 className="text-4xl font-semibold text-textColor">Deivid Vaz</h1>
-          <p className="inline-block  px-5 font-alt text-sm uppercase leading-none text-textColor">
+          <p className="inline-block  px-5 font-alt text-sm uppercase leading-none text-designColor">
             {text}
             <Cursor cursorBlinking="false" cursorStyle="|" />
           </p>
@@ -39,16 +39,17 @@ export function Hero() {
             <span className="cursor-pointer text-xl duration-300 hover:text-designColor">
               <FaLinkedin />
             </span>
-            <span className="cursor-pointer text-xl duration-300 hover:text-designColor">
+            <span className="stext-xl cursor-pointer duration-300 hover:text-designColor">
               <FiMail />
-            </span>
-            <span className="cursor-pointer text-xl duration-300 hover:text-designColor">
-              <FiSend />
             </span>
           </div>
         </div>
         {/* botões */}
-        <div></div>
+        <div className="flex h-14 justify-center">
+          <button className="borderAll flex h-full w-1/2 items-center justify-center gap-2 border-t-[1px] border-t-zinc-800 text-sm uppercase tracking-wide duration-300 hover:text-designColor">
+            Contate-me <FiSend />
+          </button>
+        </div>
       </div>
     </div>
   )
