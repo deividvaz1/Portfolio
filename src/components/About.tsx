@@ -1,4 +1,6 @@
 import { AboutMe } from "./AboutMe";
+import { Copyright } from "./Copyright";
+import { MyServices } from "./MyServices";
 import { Title } from "./Title";
 
 export function About() {
@@ -7,6 +9,9 @@ export function About() {
       <Title title="Sobre" subTitle="mim" />
       <AboutMe />
       <Title title="Trabalho" subTitle="com" />
+      <MyServices />
+      <Title title="Informações" subTitle="adicionais" />
+      <Copyright />
     </section>
   );
 }
