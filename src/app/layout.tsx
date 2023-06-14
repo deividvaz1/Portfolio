@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 {/* Parte direita do portfólio */}
                 <Hero />
                 {/* Parte esquerda do portfólio */}
-                <div className="h-[95%] w-8/12 bg-bodyColor opacity-75">
+                <div className="h-[95%] w-8/12 bg-bodyColor bg-opacity-75">
                   <div className="h-[96%] w-full overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
                     {children}
                   </div>

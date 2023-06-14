@@ -29,6 +29,6 @@
   }
 
   .aboutRightLiSpan {
-    @apply rounded-md bg-designColor px-4 py-[1px] uppercase text-black;
+    @apply rounded-md bg-designColor px-4 py-[1px] uppercase text-bodyColor;
   }
 }

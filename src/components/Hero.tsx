@@ -13,7 +13,7 @@ export function Hero() {
     delaySpeed: 2000,
   })
   return (
-    <div className="z-10 h-full w-5/12 rounded-2xl bg-bodyColor opacity-80 shadow-testShadow">
+    <div className="z-10 h-full w-5/12 rounded-2xl bg-bodyColor bg-opacity-80 shadow-testShadow">
       <div className="h-3/5 w-full">
         <Image
           src="/assets/perfil.png" // Corrija o caminho da imagem
