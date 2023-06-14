@@ -24,7 +24,7 @@ export function MyServices() {
       />
       <ServicesCard
         icons={<FaAppStoreIos />}
-        title="SEO"
+        title="Desenvolvedor de Front-End"
         subTitle="lorem ipsum, dolor sit amet consectetur adipiscining elit. Hic, provident. Accusamus at dolorem expedita dicta."
       />
     </div>
