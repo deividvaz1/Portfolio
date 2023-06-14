@@ -1,5 +1,11 @@
-import { About } from '@/components/About'
+import { About } from '@/components/About';
+import { Resume } from '@/components/Resume';
 
 export default function Home() {
-  return <About />
+  return (
+    <div>
+     {/* <About />*/}
+      <Resume />
+    </div>
+  );
 }

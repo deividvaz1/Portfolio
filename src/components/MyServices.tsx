@@ -9,7 +9,7 @@ export function MyServices() {
     <div className="grid grid-cols-2">
       <ServicesCard
         icons={<BiCodeAlt />}
-        title="Desenvolvedor Web"
+        title="Desenvolvimento Web"
         subTitle="lorem ipsum, dolor sit amet consectetur adipiscining elit. Hic, provident. Accusamus at dolorem expedita dicta."
       />
       <ServicesCard
