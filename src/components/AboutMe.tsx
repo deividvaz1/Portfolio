@@ -13,20 +13,20 @@ export function AboutMe() {
       <div className="w-1/2 p-6">
         <ul>
           <li className="aboutRightLi">
-            <span className="aboutRightLiSpan">Teste</span>
-            Teste
+            <span className="aboutRightLiSpan">Idade:</span>
+            20
           </li>
           <li className="aboutRightLi">
-            <span className="aboutRightLiSpan">Teste</span>
-            Teste
+            <span className="aboutRightLiSpan">Nacionalidade:</span>
+            Brasileiro
           </li>
           <li className="aboutRightLi">
-            <span className="aboutRightLiSpan">Teste</span>
-            Teste
+            <span className="aboutRightLiSpan">Localização:</span>
+            Viamão, RS
           </li>
           <li className="aboutRightLi">
-            <span className="aboutRightLiSpan">Teste</span>
-            Teste
+            <span className="aboutRightLiSpan">Profissão:</span>
+            Desenvolvedor
           </li>
         </ul>
       </div>
