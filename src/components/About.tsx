@@ -1,5 +1,4 @@
 import { AboutMe } from './AboutMe'
-import { Copyright } from './Copyright'
 import { MyServices } from './MyServices'
 import { Title } from './Title'
 
@@ -10,8 +9,6 @@ export function About() {
       <AboutMe />
       <Title title="Trabalho" subTitle="com" />
       <MyServices />
-      <Title title="Informações" subTitle="adicionais" />
-      <Copyright />
     </section>
   )
 }

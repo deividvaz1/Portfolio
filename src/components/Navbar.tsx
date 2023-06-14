@@ -1,3 +1,5 @@
+'use client'
+
 import { FaUser, FaEnvelope } from 'react-icons/fa'
 import { IoIosPaper } from 'react-icons/io'
 import { MdWork } from 'react-icons/md'

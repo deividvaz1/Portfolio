@@ -1,5 +1,4 @@
 /* FONTES */
-import { ReactNode } from 'react'
 import './globals.css'
 import {
   Roboto_Flex as Roboto,
@@ -16,6 +15,7 @@ import { RoundFive } from '@/components/RoundDesigns/RoundFive'
 import { RoundFour } from '@/components/RoundDesigns/RoundFour'
 import { RoundThree } from '@/components/RoundDesigns/RoundThree'
 import { RoundTwo } from '@/components/RoundDesigns/RoundTwo'
+import { ReactNode } from 'react'
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 

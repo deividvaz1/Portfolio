@@ -1,3 +1,4 @@
+import { Copyright } from './Copyright'
 import { Education } from './Education'
 import { Skills } from './Skills'
 import { Title } from './Title'
@@ -9,6 +10,8 @@ export function Resume() {
       <Education />
       <Title title="Minhas" subTitle="Competências" />
       <Skills />
+      <Title title="Informações" subTitle="adicionais" />
+      <Copyright />
     </section>
   )
 }
