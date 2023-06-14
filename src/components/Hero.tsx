@@ -1,19 +1,19 @@
-'use client'
-import Image from 'next/image'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { FiMail, FiSend } from 'react-icons/fi'
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
+"use client";
+import Image from "next/image";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiMail, FiSend } from "react-icons/fi";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 export function Hero() {
   const [text] = useTypewriter({
-    words: ['Web Desenvolvedor', 'Desenvolvedor Full Stack'],
+    words: ["Web Desenvolvedor", "Desenvolvedor Full Stack"],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
     delaySpeed: 2000,
-  })
+  });
   return (
-    <div className="h-full w-5/12 rounded-2xl bg-bodyColor">
+    <div className="z-10 h-full w-5/12 rounded-2xl bg-bodyColor shadow-testShadow">
       <div className="h-3/5 w-full">
         <Image
           src="/assets/perfil.png" // Corrija o caminho da imagem
@@ -52,5 +52,5 @@ export function Hero() {
         </div>
       </div>
     </div>
-  )
+  );
 }
