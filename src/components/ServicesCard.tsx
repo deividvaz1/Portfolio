@@ -3,9 +3,9 @@ export function ServicesCard({
   title,
   subTitle,
 }: {
-  icons: string;
-  title: string;
-  subTitle: any;
+  icons: string
+  title: string
+  subTitle: any
 }) {
   return (
     <div className="borderRight borderBottom flex flex-col items-center gap-2 px-6 py-8">
@@ -15,5 +15,5 @@ export function ServicesCard({
         {subTitle}
       </p>
     </div>
-  );
+  )
 }

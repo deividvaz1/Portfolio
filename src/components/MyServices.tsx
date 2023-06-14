@@ -1,8 +1,8 @@
-import { ServicesCard } from "./ServicesCard";
-import { FaAppStoreIos } from "react-icons/fa";
-import { AiTwotoneAppstore } from "react-icons/ai";
-import { SiAntdesign } from "react-icons/si";
-import { BiCodeAlt } from "react-icons/bi";
+import { ServicesCard } from './ServicesCard'
+import { FaAppStoreIos } from 'react-icons/fa'
+import { AiTwotoneAppstore } from 'react-icons/ai'
+import { SiAntdesign } from 'react-icons/si'
+import { BiCodeAlt } from 'react-icons/bi'
 
 export function MyServices() {
   return (
@@ -28,5 +28,5 @@ export function MyServices() {
         subTitle="lorem ipsum, dolor sit amet consectetur adipiscining elit. Hic, provident. Accusamus at dolorem expedita dicta."
       />
     </div>
-  );
+  )
 }

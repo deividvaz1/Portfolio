@@ -1,7 +1,7 @@
-import { AboutMe } from "./AboutMe";
-import { Copyright } from "./Copyright";
-import { MyServices } from "./MyServices";
-import { Title } from "./Title";
+import { AboutMe } from './AboutMe'
+import { Copyright } from './Copyright'
+import { MyServices } from './MyServices'
+import { Title } from './Title'
 
 export function About() {
   return (
@@ -13,5 +13,5 @@ export function About() {
       <Title title="Informações" subTitle="adicionais" />
       <Copyright />
     </section>
-  );
+  )
 }
