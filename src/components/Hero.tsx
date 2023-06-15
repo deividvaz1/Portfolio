@@ -7,11 +7,7 @@ import { useEffect, useState } from 'react'
 
 export function Hero() {
   const [text] = useTypewriter({
-    words: [
-      'Desenvolvedor Web',
-      'Desenvolvedor Full Stack',
-      'Desenvolvedor Mobile',
-    ],
+    words: ['Desenvolvedor Web', 'Design para Web', 'Desenvolvedor Mobile'],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
