@@ -2,7 +2,7 @@ import { SiArtstation } from 'react-icons/si'
 import { BiCodeAlt } from 'react-icons/bi'
 import { IoIosPaper } from 'react-icons/io'
 import { GiCheckMark } from 'react-icons/gi'
-import { ResumeTitle } from './Resume/ResumeTitle'
+import { ResumeTitle } from './ResumeTitle'
 
 export function Skills() {
   return (

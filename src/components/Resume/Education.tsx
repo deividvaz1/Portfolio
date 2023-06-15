@@ -1,7 +1,7 @@
 import { MdWork } from 'react-icons/md'
 import { GiGraduateCap } from 'react-icons/gi'
-import { ResumeTitle } from './Resume/ResumeTitle'
-import { ResumeCard } from './Resume/ResumeCard'
+import { ResumeCard } from './ResumeCard'
+import { ResumeTitle } from './ResumeTitle'
 
 export function Education() {
   return (

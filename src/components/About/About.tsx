@@ -1,7 +1,7 @@
 import { AboutMe } from './AboutMe'
 
 import { Title } from '../Title'
-import { MyServices } from '../MyServices'
+import { MyServices } from './MyServices'
 
 export function About() {
   return (

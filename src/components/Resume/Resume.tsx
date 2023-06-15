@@ -1,7 +1,7 @@
 import { Copyright } from '../Copyright'
-import { Education } from '../Education'
-import { Skills } from '../Skills'
 import { Title } from '../Title'
+import { Education } from './Education'
+import { Skills } from './Skills'
 
 export function Resume() {
   return (
