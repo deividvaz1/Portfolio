@@ -25,10 +25,12 @@
 
   /*Sobre css*/
   .aboutRightLi {
-    @apply flex items-center justify-between border-b-[1px] border-gray-800 py-2 text-base font-normal text-zinc-400;
+    @apply flex items-center justify-between border-b-[1px] border-gray-800 py-2 text-base font-normal text-stone-300 font-alt;
   }
 
   .aboutRightLiSpan {
     @apply rounded-md bg-designColor px-4 py-[1px] uppercase text-bodyColor;
   }
+
+
 }

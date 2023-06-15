@@ -1,5 +1,5 @@
-import { About } from '@/components/About'
-import { Resume } from '@/components/Resume'
+import { About } from '@/components/About/About'
+import { Resume } from '@/components/Resume/Resume'
 
 export default function Home() {
   return (

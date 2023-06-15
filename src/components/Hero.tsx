@@ -6,7 +6,11 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter'
 
 export function Hero() {
   const [text] = useTypewriter({
-    words: ['Web Desenvolvedor', 'Desenvolvedor Full Stack'],
+    words: [
+      'Desenvolvedor Web',
+      'Desenvolvedor Full Stack',
+      'Desenvolvedor Mobile',
+    ],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
@@ -46,7 +50,7 @@ export function Hero() {
         </div>
         {/* botões */}
         <div className="flex h-14 justify-center">
-          <button className="borderAll flex h-full w-1/2 items-center justify-center gap-2 border-t-[1px] border-t-zinc-800 text-sm uppercase tracking-wide duration-300 hover:text-designColor">
+          <button className="borderAll flex h-full w-1/2 items-center justify-center gap-2 rounded-lg border-t-[1px] border-t-zinc-800 text-sm uppercase tracking-wide transition-colors duration-300 hover:scale-105 hover:border-cyan-300 hover:text-designColor hover:shadow-2xl">
             Contate-me <FiSend />
           </button>
         </div>

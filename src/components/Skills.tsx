@@ -1,8 +1,8 @@
-import { ResumeTitle } from './ResumeTitle'
 import { SiArtstation } from 'react-icons/si'
 import { BiCodeAlt } from 'react-icons/bi'
 import { IoIosPaper } from 'react-icons/io'
 import { GiCheckMark } from 'react-icons/gi'
+import { ResumeTitle } from './Resume/ResumeTitle'
 
 export function Skills() {
   return (
@@ -121,7 +121,7 @@ export function Skills() {
         <div className="border-b-[1px] border-gray-800 py-3">
           <p className="-mb-1.5 text-base text-textColor">Next.js</p>
           <span className="relative inline-flex h-1 w-full bg-zinc-600">
-            <span className="absolute left-0 top-0 h-full w-[95%] bg-designColor"></span>
+            <span className="absolute left-0 top-0 h-full w-[85%] bg-designColor"></span>
           </span>
         </div>
       </div>

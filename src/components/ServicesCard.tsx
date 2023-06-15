@@ -3,7 +3,7 @@ export function ServicesCard({
   title,
   subTitle,
 }: {
-  icons: string
+  icons: any
   title: string
   subTitle: any
 }) {

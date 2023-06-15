@@ -1,4 +1,14 @@
-export function ResumeCard({ badge, title, subTitle, des }) {
+export function ResumeCard({
+  badge,
+  title,
+  subTitle,
+  des,
+}: {
+  badge: string
+  title: string
+  subTitle: string
+  des: string
+}) {
   return (
     <div className="flex w-full flex-col gap-2.5 border-b-[1px] border-gray-800 py-6">
       {badge === '' ? (
