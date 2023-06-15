@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { FiMail, FiSend } from 'react-icons/fi'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import { useEffect, useState } from 'react'
 
 export function Hero() {
   const [text] = useTypewriter({
@@ -16,18 +17,35 @@ export function Hero() {
     deleteSpeed: 20,
     delaySpeed: 2000,
   })
+
+  const [profileImageUrl, setProfileImageUrl] = useState('')
+
+  useEffect(() => {
+    fetch('https://api.github.com/users/deividvaz1')
+      .then((response) => response.json())
+      .then((data) => {
+        setProfileImageUrl(data.avatar_url)
+      })
+      .catch((error) => {
+        console.error('Erro ao obter foto de perfil do GitHub:', error)
+      })
+  }, [])
+
   return (
     <div className="z-10 h-full w-5/12 rounded-2xl bg-bodyColor bg-opacity-80 shadow-testShadow">
       <div className="h-3/5 w-full">
-        <Image
-          src="/assets/perfil.png" // Corrija o caminho da imagem
-          alt="Profile"
-          className="h-full w-full rounded-2xl object-cover"
-          width="700"
-          height="1"
-          loading="lazy"
-        />
+        {profileImageUrl && (
+          <Image
+            src={profileImageUrl}
+            alt="Profile"
+            className="rounded-2xl object-cover"
+            loading="lazy"
+            width="500"
+            height="300"
+          />
+        )}
       </div>
+
       <div className="h-2/5 w-full">
         {/* informações */}
         <div className="flex flex-col items-center gap-2 py-10">
