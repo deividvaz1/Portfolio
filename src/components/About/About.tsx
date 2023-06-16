@@ -2,6 +2,7 @@
 import { AboutMe } from './AboutMe'
 import { Title } from '../Title'
 import { MyServices } from './MyServices'
+import { Copyright } from '../Copyright'
 
 export function About() {
   return (
@@ -10,6 +11,8 @@ export function About() {
       <AboutMe />
       <Title title="Trabalho" subTitle="com" />
       <MyServices />
+      <Title title="Informações" subTitle="adicionais" />
+      <Copyright />
     </section>
   )
 }

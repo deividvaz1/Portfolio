@@ -10,8 +10,6 @@ export function Resume() {
       <Education />
       <Title title="Minhas" subTitle="Competências" />
       <Skills />
-      <Title title="Informações" subTitle="adicionais" />
-      <Copyright />
     </section>
   )
 }

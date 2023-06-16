@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function ProjectCard({ image, title, category }) {
   return (
-    <div className="flex w-full flex-col items-center justify-center border-b-[1px] border-b-zinc-800 py-8">
+    <div className="flex w-full flex-col items-center justify-center border-b-[1px] border-gray-800 py-8">
       <div className="group relative mb-3 h-full w-full cursor-pointer overflow-hidden">
         <Image
           src={image}
