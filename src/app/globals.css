@@ -32,5 +32,17 @@
     @apply rounded-md bg-designColor px-4 py-[1px] uppercase text-bodyColor;
   }
 
+}
+.hover\:w-full:hover {
+    width: 100%;
+}
+.group:hover .group-hover\:w-full {
+    width: 100%;
+}
+.group:hover .group-hover\:inline-block {
+    display: inline-block;
+}
+.group:hover .group-hover\:flex-grow {
+    flex-grow: 1;
 
 }

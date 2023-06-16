@@ -1,3 +1,4 @@
+'use client'
 /* FONTES */
 import './globals.css'
 import {
@@ -5,8 +6,11 @@ import {
   Bai_Jamjuree as BaiJamjuree,
 } from 'next/font/google'
 
+import React, { ReactNode, useState } from 'react'
+
+import { motion } from 'framer-motion'
+
 /* LAYOUT */
-import { Navbar } from '@/components/Navbar'
 import { Hero } from '@/components/Hero'
 
 /* Import Background */
@@ -15,7 +19,16 @@ import { RoundFive } from '@/components/RoundDesigns/RoundFive'
 import { RoundFour } from '@/components/RoundDesigns/RoundFour'
 import { RoundThree } from '@/components/RoundDesigns/RoundThree'
 import { RoundTwo } from '@/components/RoundDesigns/RoundTwo'
-import { ReactNode } from 'react'
+
+import { About } from '@/components/About/About'
+import { Resume } from '@/components/Resume/Resume'
+import { FaUser, FaEnvelope } from 'react-icons/fa'
+import { IoIosPaper } from 'react-icons/io'
+import { MdWork } from 'react-icons/md'
+import { SiGooglechat } from 'react-icons/si'
+import { Projects } from '@/components/projects/Projects'
+import { Redes } from '@/components/redes/Redes'
+import { Email } from '@/components/email.tsx/Email'
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 
@@ -31,6 +44,11 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const [about, setAbout] = useState(true)
+  const [resume, setResume] = useState(false)
+  const [projects, setProjects] = useState(false)
+  const [redes, setRedes] = useState(false)
+  const [email, setEmail] = useState(false)
   return (
     <html lang="en">
       <body
@@ -40,14 +58,147 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="mx-auto flex h-full max-w-screen-2xl items-center justify-center">
             <div className="z-50 flex h-[85%] w-[85%] items-start justify-between bg-transparent text-white">
               {/* Navbar */}
-              <Navbar />
+              <div className=" flex h-96 w-16 flex-col gap-4">
+                <div className=" group flex h-20 w-full cursor-pointer items-center justify-center rounded-3xl bg-bodyColor bg-opacity-75">
+                  {/* NAVBAR */}
+                  <div className="flex flex-col gap-1.5 overflow-hidden">
+                    <span className="inline-block h-[2px] w-8 -translate-x-2 bg-textColor transition-transform duration-300 group-hover:translate-x-0 group-hover:bg-designColor"></span>
+                    <span className="inline-block h-[2px] w-8 bg-textColor transition-transform duration-300 group-hover:bg-designColor"></span>
+                    <span className="inline-block h-[2px] w-8 -translate-x-3.5 bg-textColor transition-transform duration-300 group-hover:translate-x-0 group-hover:bg-designColor"></span>
+                  </div>
+                </div>
+                <div className="flex h-80 w-full flex-col items-center justify-between rounded-3xl bg-bodyColor bg-opacity-75 py-6">
+                  <span
+                    onClick={() => {
+                      setAbout(true)
+                      setResume(false)
+                      setProjects(false)
+                      setRedes(false)
+                      setEmail(false)
+                    }}
+                    className="group relative flex h-6 w-full cursor-pointer items-center justify-center text-xl text-textColor duration-300 hover:text-designColor"
+                  >
+                    <FaUser />
+                    <span className="absolute left-0 z-20 translate-x-8 rounded-xl bg-designColor px-4 py-[1px] font-alt text-xs uppercase text-black opacity-0 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-70">
+                      Sobre
+                    </span>
+                  </span>
+                  <span
+                    onClick={() => {
+                      setAbout(false)
+                      setResume(true)
+                      setProjects(false)
+                      setRedes(false)
+                      setEmail(false)
+                    }}
+                    className="group relative flex h-6 w-full cursor-pointer items-center justify-center text-xl text-textColor duration-300 hover:text-designColor"
+                  >
+                    <IoIosPaper />
+                    <span className="absolute left-0 z-20 translate-x-8 rounded-xl bg-designColor px-4 py-[1px] font-alt text-xs uppercase text-black opacity-0 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-70">
+                      Resumo
+                    </span>
+                  </span>
+                  <span
+                    onClick={() => {
+                      setAbout(false)
+                      setResume(false)
+                      setProjects(true)
+                      setRedes(false)
+                      setEmail(false)
+                    }}
+                    className="group relative flex h-6 w-full cursor-pointer items-center justify-center text-xl text-textColor duration-300 hover:text-designColor"
+                  >
+                    <MdWork />
+                    <span className="absolute left-0 z-20 translate-x-8 rounded-xl bg-designColor px-4 py-[1px] font-alt text-xs uppercase text-black opacity-0 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-70">
+                      Meus Projetos
+                    </span>
+                  </span>
+                  <span
+                    onClick={() => {
+                      setAbout(false)
+                      setResume(false)
+                      setProjects(false)
+                      setRedes(true)
+                      setEmail(false)
+                    }}
+                    className="group relative flex h-6 w-full cursor-pointer items-center justify-center text-xl text-textColor duration-300 hover:text-designColor"
+                  >
+                    <SiGooglechat />
+                    <span className="absolute left-0 z-20 translate-x-8 rounded-xl bg-designColor px-4 py-[1px] font-alt text-xs uppercase text-black opacity-0 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-70">
+                      Outras Redes
+                    </span>
+                  </span>
+                  <span
+                    onClick={() => {
+                      setAbout(false)
+                      setResume(false)
+                      setProjects(false)
+                      setRedes(false)
+                      setEmail(true)
+                    }}
+                    className="group relative flex h-6 w-full cursor-pointer items-center justify-center text-xl text-textColor duration-300 hover:text-designColor"
+                  >
+                    <FaEnvelope />
+                    <span className="absolute left-0 z-20 translate-x-8 rounded-xl bg-designColor px-4 py-[1px] font-alt text-xs uppercase text-black opacity-0 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-70">
+                      Email
+                    </span>
+                  </span>
+                </div>
+                {/* FIM - NAVBAR */}
+              </div>
               <div className="flex h-full w-[94%] items-center bg-transparent ">
                 {/* Parte direita do portfólio */}
                 <Hero />
                 {/* Parte esquerda do portfólio */}
                 <div className="h-[95%] w-8/12 bg-bodyColor bg-opacity-75">
                   <div className="h-[96%] w-full overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
-                    {children}
+                    {/* Substituir o valor de children aqui */}
+                    {about && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <About />
+                      </motion.div>
+                    )}
+                    {resume && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Resume />
+                      </motion.div>
+                    )}
+                    {projects && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Projects />
+                      </motion.div>
+                    )}
+                    {redes && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Redes />
+                      </motion.div>
+                    )}
+                    {email && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Email />
+                      </motion.div>
+                    )}
+                    {/* <Resume /> */}
                   </div>
                 </div>
               </div>
