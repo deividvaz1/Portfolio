@@ -2,6 +2,7 @@
 import { FiSend } from 'react-icons/fi'
 import { Title } from '../Title'
 import { useState } from 'react'
+import axios from 'axios'
 
 export function Email() {
   const [usuario, setUsuario] = useState('')
@@ -14,10 +15,63 @@ export function Email() {
   const [errMensagem, setErrMensagem] = useState(false)
   //* SUCESSO AO ENVIAR A MENSAGEM *//
   const [sucess, setSucess] = useState('')
-
-  const handleSend = (e: any) => {
-    e.preventDefault()
+  //*  *//
+  const EmailValidation = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/)
   }
+
+  const handleName = (e) => {
+    setUsuario(e.target.value)
+    setErrUsuario(false)
+  }
+  const handleEmail = (e) => {
+    setEmail(e.target.value)
+    setErrEmail(false)
+  }
+  const handleMensagem = (e) => {
+    setMensagem(e.target.value)
+    setErrMensagem(false)
+  }
+
+  const handleSend = async (e) => {
+    e.preventDefault()
+    if (!usuario) {
+      setErrUsuario(true)
+    }
+    if (!email) {
+      setErrEmail(true)
+    } else {
+      if (!EmailValidation(email)) {
+        setErrEmail(true)
+      }
+    }
+    if (!mensagem) {
+      setErrMensagem(true)
+    }
+    if (usuario && email && EmailValidation(email) && mensagem) {
+      try {
+        await axios.post(
+          'https://getform.io/f/6c3558c6-d73e-4df4-96ea-04017addb270',
+          {
+            name: usuario,
+            email,
+            message: mensagem,
+          },
+        )
+        setSucess(`${usuario}`)
+        setUsuario('')
+        setEmail('')
+        setMensagem('')
+      } catch (error) {
+        // Lida com erros durante a solicitação POST
+        console.error(error)
+        // Defina uma mensagem de erro adequada, se necessário
+      }
+    }
+  }
+
   return (
     <div>
       <Title title="Entrar em" subTitle="Contato" />
@@ -41,33 +95,63 @@ export function Email() {
       </div>
       <div className="mt-10 w-full">
         <Title title="Entrar em" subTitle="Contato" />
-        <form className="flex flex-col gap-6 p-6">
-          <div className="flex w-full justify-between gap-10">
-            <input
-              onChange={handleSend}
-              className="w-full rounded-md border-2 border-zinc-600 bg-transparent px-4 py-2 text-base font-normal text-gray-200 outline-none duration-300 focus-visible:border-designColor"
-              type="text"
-              placeholder="Nome completo:"
-            />
-            <input
-              className="w-full rounded-md border-2 border-zinc-600 bg-transparent px-4 py-2 text-base font-normal text-gray-200 outline-none duration-300 focus-visible:border-designColor"
-              type="email"
-              placeholder="Email:"
-            />
-          </div>
-          <textarea
-            className="w-full resize-none rounded-md border-2 border-zinc-600 bg-transparent px-4 py-2 text-base font-normal text-gray-200 outline-none duration-300 focus-visible:border-designColor"
-            placeholder="Sua Mensagem:"
-            cols="30"
-            rows="4"
-          ></textarea>
-          <button
-            onClick={handleSend}
-            className="borderAll flex h-10 w-44 items-center justify-center gap-2 rounded-lg border-t-[1px] border-t-zinc-800 text-sm uppercase tracking-wide transition-colors duration-300 hover:scale-105 hover:border-cyan-300 hover:text-designColor hover:shadow-2xl"
+        {/* FORMULARIO */}
+        {sucess ? (
+          <p className="p-20 text-center font-alt text-base text-designColor">
+            Olá <span className="text-[#eee]">{sucess}</span>, sua mensagem foi
+            enviada com sucesso! Obrigado por entrar em contato 🎉
+          </p>
+        ) : (
+          <form
+            id="form"
+            action="https://getform.io/f/6c3558c6-d73e-4df4-96ea-04017addb270"
+            method=""
+            className="flex flex-col gap-6 p-6"
           >
-            Enviar Mensagem <span>{<FiSend className="h-5 w-5" />}</span>
-          </button>
-        </form>
+            <div className="flex w-full justify-between gap-10">
+              <input
+                onChange={handleName}
+                value={usuario}
+                className={`${
+                  errUsuario
+                    ? 'border-red-600 focus-visible:border-red-600'
+                    : 'border-zinc-600 focus-visible:border-designColor'
+                } w-full rounded-md border-2 bg-transparent px-4 py-2 text-base font-normal text-gray-200 outline-none duration-300 `}
+                type="text"
+                placeholder="Nome completo"
+              />
+              <input
+                onChange={handleEmail}
+                value={email}
+                className={`${
+                  errEmail
+                    ? 'border-red-600 focus-visible:border-red-600'
+                    : 'border-zinc-600 focus-visible:border-designColor'
+                }w-full rounded-md border-2  bg-transparent px-4 py-2 text-base font-normal text-gray-200 outline-none duration-300`}
+                type="email"
+                placeholder="Email"
+              />
+            </div>
+            <textarea
+              onChange={handleMensagem}
+              value={mensagem}
+              className={`${
+                errMensagem
+                  ? 'border-red-600 focus-visible:border-red-600'
+                  : 'border-zinc-600 focus-visible:border-designColor'
+              } w-full resize-none rounded-md border-2  bg-transparent px-4 py-2 text-base font-normal text-gray-200 outline-none duration-300`}
+              placeholder="Sua Mensagem"
+              cols="30"
+              rows="4"
+            ></textarea>
+            <button
+              onClick={handleSend}
+              className="borderAll flex h-10 w-44 items-center justify-center gap-2 rounded-lg border-t-[1px] border-t-zinc-800 text-sm uppercase tracking-wide transition-colors duration-300 hover:scale-105 hover:border-cyan-300 hover:text-designColor hover:shadow-2xl"
+            >
+              Enviar Mensagem <span>{<FiSend className="h-5 w-5" />}</span>
+            </button>
+          </form>
+        )}
       </div>
     </div>
   )
