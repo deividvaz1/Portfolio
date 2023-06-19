@@ -6,10 +6,10 @@ import { BiCodeAlt } from 'react-icons/bi'
 
 export function MyServices() {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2">
       <ServicesCard
         icons={<BiCodeAlt />}
-        title="Desenvolvimento Web"
+        title="Dev Web"
         subTitle="lorem ipsum, dolor sit amet consectetur adipiscining elit. Hic, provident. Accusamus at dolorem expedita dicta."
       />
       <ServicesCard
@@ -24,7 +24,7 @@ export function MyServices() {
       />
       <ServicesCard
         icons={<FaAppStoreIos />}
-        title="Desenvolvimento Front-End"
+        title="Dev Front-End"
         subTitle="lorem ipsum, dolor sit amet consectetur adipiscining elit. Hic, provident. Accusamus at dolorem expedita dicta."
       />
     </div>

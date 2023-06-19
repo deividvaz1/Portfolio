@@ -9,13 +9,11 @@ export function Email() {
   const [email, setEmail] = useState('')
   const [mensagem, setMensagem] = useState('')
 
-  //* ERRO AO ENVIAR A MENSAGEM *//
   const [errUsuario, setErrUsuario] = useState(false)
   const [errEmail, setErrEmail] = useState(false)
   const [errMensagem, setErrMensagem] = useState(false)
-  //* SUCESSO AO ENVIAR A MENSAGEM *//
   const [sucess, setSucess] = useState('')
-  //*  *//
+
   const EmailValidation = (email) => {
     return String(email)
       .toLowerCase()
@@ -65,18 +63,16 @@ export function Email() {
         setEmail('')
         setMensagem('')
       } catch (error) {
-        // Lida com erros durante a solicitação POST
         console.error(error)
-        // Defina uma mensagem de erro adequada, se necessário
       }
     }
   }
 
   return (
-    <div>
+    <div className="flex flex-col">
       <Title title="Entrar em" subTitle="Contato" />
-      <div className="flex justify-between gap-20 p-6">
-        <div className="w-1/2">
+      <div className="flex flex-col justify-between gap-4 p-6 sm:flex-row">
+        <div className="w-full sm:w-1/2">
           <p className="flex w-full justify-between border-b-[1px] border-b-gray-800 py-4 font-alt text-lg text-[#ccc]">
             <span className="flex items-center justify-center rounded-md bg-designColor px-2 font-alt text-sm font-medium text-gray-700">
               Email:
@@ -84,7 +80,7 @@ export function Email() {
             deividvaz100@gmail.com
           </p>
         </div>
-        <div className="w-1/2">
+        <div className="w-full sm:w-1/2">
           <p className="flex w-full justify-between border-b-[1px] border-b-gray-800 py-4 font-alt text-lg text-[#ccc]">
             <span className="flex items-center justify-center rounded-md bg-designColor px-2 font-alt text-sm font-medium text-gray-700">
               Telefone:
@@ -95,9 +91,8 @@ export function Email() {
       </div>
       <div className="mt-10 w-full">
         <Title title="Entrar em" subTitle="Contato" />
-        {/* FORMULARIO */}
         {sucess ? (
-          <p className="p-20 text-center font-alt text-base text-designColor">
+          <p className="p-6 text-center font-alt text-base text-designColor">
             Olá <span className="text-[#eee]">{sucess}</span>, sua mensagem foi
             enviada com sucesso! Obrigado por entrar em contato 🎉
           </p>
@@ -108,7 +103,7 @@ export function Email() {
             method=""
             className="flex flex-col gap-6 p-6"
           >
-            <div className="flex w-full justify-between gap-10">
+            <div className="flex flex-col gap-4 sm:flex-row">
               <input
                 onChange={handleName}
                 value={usuario}

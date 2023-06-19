@@ -9,7 +9,7 @@ export function Projects() {
   return (
     <div>
       <Title title="Meus" subTitle="Projetos" />
-      <div className="grid w-full grid-cols-2 gap-10">
+      <div className="grid w-full md:grid-cols-2 md:gap-10">
         <div className="px-6">
           <a
             target="_blank"
@@ -34,7 +34,7 @@ export function Projects() {
             />
           </a>
         </div>
-        <div className="px-6 ">
+        <div className="mt-6 px-6 md:mt-0">
           <a
             target="_blank"
             rel="noreferrer"

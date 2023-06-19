@@ -1,7 +1,7 @@
 export function AboutMe() {
   return (
-    <div className="flex pb-6">
-      <div className="borderRight flex w-1/2 flex-col  p-6 text-zinc-400">
+    <div className="flex flex-col pb-6 sm:flex-row">
+      <div className="flex w-full flex-col border-b p-6 text-zinc-400 sm:w-1/2 sm:border-b-0 sm:border-r">
         <div className="py-6">
           <h2 className="text-alt mb-1 text-lg font-semibold">Teste grid</h2>
           <p className="text-base font-normal leading-6">
@@ -12,7 +12,7 @@ export function AboutMe() {
           </p>
         </div>
       </div>
-      <div className="w-1/2 p-6">
+      <div className="w-full p-6 sm:w-1/2">
         <ul>
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Idade:</span>
