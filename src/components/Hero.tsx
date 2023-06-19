@@ -28,7 +28,7 @@ export function Hero() {
   }, [])
 
   return (
-    <div className="z-10 h-full w-5/12 rounded-2xl bg-bodyColor bg-opacity-80 shadow-testShadow">
+    <div className="z-10 h-full w-5/12 rounded-2xl bg-designColor bg-opacity-80 shadow-testShadow">
       <div className="h-3/5 w-full">
         {profileImageUrl && (
           <Image

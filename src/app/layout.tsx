@@ -6,7 +6,7 @@ import {
   Bai_Jamjuree as BaiJamjuree,
 } from 'next/font/google'
 
-import React, { ReactNode, useState } from 'react'
+import React, { ReactNode, useEffect, useRef, useState } from 'react'
 
 import { motion } from 'framer-motion'
 
@@ -17,11 +17,12 @@ import { About } from '@/components/About/About'
 import { Resume } from '@/components/Resume/Resume'
 import { FaUser, FaEnvelope } from 'react-icons/fa'
 import { IoIosPaper } from 'react-icons/io'
-import { MdWork } from 'react-icons/md'
+import { MdOutlineClose, MdWork } from 'react-icons/md'
 import { SiGooglechat } from 'react-icons/si'
 import { Projects } from '@/components/projects/Projects'
 import { Redes } from '@/components/redes/Redes'
 import { Email } from '@/components/email.tsx/Email'
+import { SideNav } from '@/components/SideNav'
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 
@@ -32,12 +33,22 @@ const baiJamjuree = BaiJamjuree({
 })
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const [about, setAbout] = useState(false)
-  const [resume, setResume] = useState(true)
+  const ref = useRef()
+
+  const [about, setAbout] = useState(true)
+  const [resume, setResume] = useState(false)
   const [projects, setProjects] = useState(false)
   const [redes, setRedes] = useState(false)
   const [email, setEmail] = useState(false)
   const [sidenav, setSidenav] = useState(false)
+
+  useEffect(() => {
+    document.body.addEventListener('click', (e) => {
+      if (e.target.contains(ref.current)) {
+        setSidenav(false)
+      }
+    })
+  }, [])
   return (
     <html lang="en">
       <body
@@ -60,7 +71,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   </div>
                 </div>
                 {/* SIDENAV */}
-                {sidenav && <div>hello</div>}
+                {sidenav && (
+                  <div className="fixed left-0 top-0 z-50 h-screen w-full bg-black bg-opacity-50">
+                    <div className="relative h-full w-96">
+                      <motion.div
+                        ref={ref}
+                        initial={{ x: -500, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="h-full w-full overflow-y-scroll bg-bodyColor scrollbar-thin scrollbar-thumb-[#646464]"
+                      >
+                        <SideNav />
+                        <span
+                          onClick={() => setSidenav(false)}
+                          className="absolute -right-16 top-0 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg bg-bodyColor text-2xl text-textColor duration-300 hover:text-designColor"
+                        >
+                          <MdOutlineClose />
+                        </span>
+                      </motion.div>
+                    </div>
+                  </div>
+                )}
                 {/* SIDENAV */}
                 <div className="flex h-80 w-full flex-col items-center justify-between rounded-3xl bg-bodyColor bg-opacity-75 py-6">
                   <span
@@ -141,11 +172,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 </div>
                 {/* FIM - NAVBAR */}
               </div>
-              <div className="flex h-full w-[94%] items-center bg-transparent ">
+              <div className="flex h-full w-[94%] items-center bg-transparent">
                 {/* Parte direita do portfólio */}
                 <Hero />
                 {/* Parte esquerda do portfólio */}
-                <div className="h-[95%] w-8/12 bg-bodyColor bg-opacity-75">
+                <div className="h-[95%] w-8/12 bg-[#f02] bg-[#f] bg-opacity-75">
                   <div className="h-[96%] w-full overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
                     {/* Substituir o valor de children aqui */}
                     {about && (
