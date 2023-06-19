@@ -1,7 +1,7 @@
 'use client'
-import ImageSrc from 'public/assets/layout-app-saude.png'
-import Spacetime from 'public/assets/memorias.png'
-import Restaurante from 'public/assets/restaurante.png'
+import ImageSrc from 'src/app/public/assets/layout-app-saude.png'
+import Spacetime from 'src/app/public/assets/memorias.png'
+import Restaurante from 'src/app/public/assets/restaurante.png'
 import { Title } from '../Title'
 import { ProjectCard } from './ProjectCard'
 
