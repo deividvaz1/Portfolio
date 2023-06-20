@@ -1,4 +1,3 @@
-import { Copyright } from '../Copyright'
 import { Title } from '../Title'
 import { Education } from './Education'
 import { Skills } from './Skills'

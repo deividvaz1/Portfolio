@@ -14,26 +14,26 @@ export function Email() {
   const [errMensagem, setErrMensagem] = useState(false)
   const [sucess, setSucess] = useState('')
 
-  const EmailValidation = (email) => {
+  const EmailValidation = (email: any) => {
     return String(email)
       .toLowerCase()
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/)
   }
 
-  const handleName = (e) => {
+  const handleName = (e: any) => {
     setUsuario(e.target.value)
     setErrUsuario(false)
   }
-  const handleEmail = (e) => {
+  const handleEmail = (e: any) => {
     setEmail(e.target.value)
     setErrEmail(false)
   }
-  const handleMensagem = (e) => {
+  const handleMensagem = (e: any) => {
     setMensagem(e.target.value)
     setErrMensagem(false)
   }
 
-  const handleSend = async (e) => {
+  const handleSend = async (e: any) => {
     e.preventDefault()
     if (!usuario) {
       setErrUsuario(true)

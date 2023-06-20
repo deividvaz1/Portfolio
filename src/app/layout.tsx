@@ -34,7 +34,6 @@ const baiJamjuree = BaiJamjuree({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const [showDiv, setShowDiv] = useState(true)
-  const [moveRight, setMoveRight] = useState(false)
 
   useEffect(() => {
     function handleResize() {
@@ -195,7 +194,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               {/* FIM - NAVBAR */}
               <div className="flex h-full w-[94%] items-center bg-transparent">
                 <div
-                  className={`h-full w-5/12 rounded-2xl bg-designColor bg-opacity-80 shadow-testShadow ${
+                  className={`h-full w-5/12 rounded-2xl bg-transparent bg-opacity-80 shadow-testShadow ${
                     showDiv ? '' : 'hidden'
                   }`}
                 >
@@ -203,7 +202,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <Hero />
                 </div>
                 {/* Parte esquerda do portfólio */}
-                <div className="bg-90 ml-12 h-[95%] w-8/12 rounded-2xl bg-white sm:-ml-0">
+                <div className="bg-90 ml-12 h-[95%] w-8/12 rounded-2xl bg-transparent sm:-ml-0">
                   <div className="h-[96%] w-full overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
                     {/* Substituir o valor de children aqui */}
                     {about && (

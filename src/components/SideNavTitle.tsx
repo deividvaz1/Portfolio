@@ -1,4 +1,10 @@
-export function SideNavTitle({ title, subTitle }) {
+export function SideNavTitle({
+  title,
+  subTitle,
+}: {
+  title: any
+  subTitle: string
+}) {
   return (
     <h1 className="relative mt-6 border-b-[1px] border-b-gray-800 pb-4 font-alt text-xl font-semibold tracking-wide text-zinc-100">
       <span className="text-designColor">{title}</span>
