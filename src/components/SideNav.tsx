@@ -16,7 +16,7 @@ export function SideNav() {
       <SideNavTitle title="M" subTitle="eu contato" />
       <ul>
         <li className="sidenavLi">+55 (51)984840959</li>
-        <li className="sidenavLi">deividvaz100@gmail.com</li>
+        <li className="sidenavLi">@gmail.com</li>
       </ul>
     </div>
   )

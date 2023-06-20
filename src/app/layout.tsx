@@ -33,6 +33,27 @@ const baiJamjuree = BaiJamjuree({
 })
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const [showDiv, setShowDiv] = useState(true)
+  const [moveRight, setMoveRight] = useState(false)
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 640) {
+        setShowDiv(false)
+      } else {
+        setShowDiv(true)
+      }
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   const ref = useRef()
 
   const [about, setAbout] = useState(true)
@@ -56,7 +77,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <div className="relative h-screen w-full overflow-hidden font-bold text-textColor">
           <main className="mx-auto flex h-full max-w-screen-2xl items-center justify-center">
-            <div className="z-50 flex h-[85%] w-[85%] items-start justify-between bg-transparent text-white">
+            <div className="z-50 flex h-[85%] w-[85%] items-start justify-between rounded-2xl bg-bodyColor bg-opacity-70 text-white">
               {/* Navbar */}
               <div className=" flex h-96 w-16 flex-col gap-4">
                 <div className=" group flex h-20 w-full cursor-pointer items-center justify-center rounded-3xl bg-bodyColor bg-opacity-75">
@@ -170,13 +191,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     </span>
                   </span>
                 </div>
-                {/* FIM - NAVBAR */}
               </div>
+              {/* FIM - NAVBAR */}
               <div className="flex h-full w-[94%] items-center bg-transparent">
-                {/* Parte direita do portfólio */}
-                <Hero />
+                <div
+                  className={`h-full w-5/12 rounded-2xl bg-designColor bg-opacity-80 shadow-testShadow ${
+                    showDiv ? '' : 'hidden'
+                  }`}
+                >
+                  {/* Parte direita do portfólio */}
+                  <Hero />
+                </div>
                 {/* Parte esquerda do portfólio */}
-                <div className="h-[95%] w-8/12 bg-[#f02] bg-[#f] bg-opacity-75">
+                <div className="bg-90 ml-12 h-[95%] w-8/12 rounded-2xl bg-white sm:-ml-0">
                   <div className="h-[96%] w-full overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
                     {/* Substituir o valor de children aqui */}
                     {about && (

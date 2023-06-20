@@ -6,8 +6,8 @@ import { ResumeTitle } from './ResumeTitle'
 
 export function Skills() {
   return (
-    <div className="grid w-full grid-cols-9 px-6">
-      <div className="col-span-4">
+    <div className="grid grid-cols-1 px-6 md:grid-cols-9">
+      <div className="md:order-1 md:col-span-4">
         {/* DESIGN */}
         <ResumeTitle title="Design" icons={<SiArtstation />} />
         <div className="py-4">
@@ -35,45 +35,46 @@ export function Skills() {
               <span className="absolute left-0 top-0 h-full w-[60%] bg-designColor"></span>
             </span>
           </div>
+        </div>
+        {/* CONHECIMENTOS */}
+        <div className="md:order-3 md:col-span-4">
+          <ResumeTitle title="Conhecimentos" icons={<IoIosPaper />} />
 
-          {/* CONHECIMENTOS */}
-          <div className="col-span-4">
-            <ResumeTitle title="Conhecimentos" icons={<IoIosPaper />} />
-
-            <div className=" border-gray-800 py-3">
-              <h1 className="mb-5 flex items-center gap-2 text-base font-normal text-textColor">
-                <span className="text-2xl text-designColor">
-                  <GiCheckMark />
-                </span>
-                Host Web
-              </h1>
-              <h1 className="mb-5 flex items-center gap-2 text-base font-normal text-textColor">
-                <span className="text-2xl text-designColor">
-                  <GiCheckMark />
-                </span>
-                Aplicativos Android
-              </h1>
-              <h1 className="mb-5 flex items-center gap-2 text-base font-normal text-textColor">
-                <span className="text-2xl text-designColor">
-                  <GiCheckMark />
-                </span>
-                Criação de website design
-              </h1>
-              <h1 className=" flex items-center gap-2 text-base font-normal text-textColor">
-                <span className="text-2xl text-designColor">
-                  <GiCheckMark />
-                </span>
-                Criação de logos
-              </h1>
-            </div>
+          <div className="border-gray-800 py-3">
+            <h1 className="mb-5 flex items-center gap-2 text-base font-normal text-textColor">
+              <span className="text-2xl text-designColor">
+                <GiCheckMark />
+              </span>
+              Host Web
+            </h1>
+            <h1 className="mb-5 flex items-center gap-2 text-base font-normal text-textColor">
+              <span className="text-2xl text-designColor">
+                <GiCheckMark />
+              </span>
+              Aplicativos Android
+            </h1>
+            <h1 className="mb-5 flex items-center gap-2 text-base font-normal text-textColor">
+              <span className="text-2xl text-designColor">
+                <GiCheckMark />
+              </span>
+              Criação de website design
+            </h1>
+            <h1 className="flex items-center gap-2 text-base font-normal text-textColor">
+              <span className="text-2xl text-designColor">
+                <GiCheckMark />
+              </span>
+              Criação de logos
+            </h1>
           </div>
         </div>
       </div>
-      <div className="flex h-full w-full items-center justify-center">
+
+      <div className="hidden h-full w-full items-center justify-center md:order-2 md:flex">
         <span className="inline-flex h-full w-[1px] bg-gray-800"></span>
       </div>
+
       {/* PROGRAMAÇÃO */}
-      <div className="col-span-4">
+      <div className="md:order-2 md:col-span-4">
         <ResumeTitle title="Programação" icons={<BiCodeAlt />} />
 
         <div className="border-b-[1px] border-gray-800 py-3">

@@ -13,7 +13,7 @@ export function AboutMe() {
         </div>
       </div>
       <div className="w-full p-6 sm:w-1/2">
-        <ul>
+        <ul className="sm:flex-col sm:space-y-2">
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">Idade:</span>
             20

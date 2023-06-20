@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 export function Hero() {
   const [text] = useTypewriter({
-    words: ['Desenvolvedor Web', 'Design para Web', 'Desenvolvedor Mobile'],
+    words: ['Dev Web', 'Design para Web', 'Dev Mobile'],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
@@ -28,7 +28,7 @@ export function Hero() {
   }, [])
 
   return (
-    <div className="z-10 h-full w-5/12 rounded-2xl bg-designColor bg-opacity-80 shadow-testShadow">
+    <div>
       <div className="h-3/5 w-full">
         {profileImageUrl && (
           <Image

@@ -25,16 +25,27 @@
 
   /*Sobre css*/
   .aboutRightLi {
-    @apply flex items-center justify-between border-b-[1px] border-gray-800 py-2 text-base font-normal text-stone-300 font-alt;
+  @apply flex items-center justify-between border-b-[1px] border-gray-800 py-2 text-base font-normal text-stone-300 font-alt;
+}
+
+.aboutRightLiSpan {
+  @apply rounded-md bg-designColor px-4 py-[1px] uppercase text-bodyColor;
+}
+
+@media (max-width: 640px) {
+  .aboutRightLi {
+    @apply flex-col;
   }
 
   .aboutRightLiSpan {
-    @apply rounded-md bg-designColor px-4 py-[1px] uppercase text-bodyColor;
+    @apply mb-2;
   }
+}
   .sidenavLi {
     @apply text-textColor border-b-[1px] border-b-gray-800 py-4 text-base 
     hover:text-designColor duration-300 
   }
+  
 
 }
 .hover\:w-full:hover {
@@ -51,3 +62,4 @@
     }
 
 
+    
