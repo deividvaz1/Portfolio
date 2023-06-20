@@ -136,8 +136,8 @@ export function Email() {
                   : 'border-zinc-600 focus-visible:border-designColor'
               } w-full resize-none rounded-md border-2  bg-transparent px-4 py-2 text-base font-normal text-gray-200 outline-none duration-300`}
               placeholder="Sua Mensagem"
-              cols="30"
-              rows="4"
+              cols={30}
+              rows={4}
             ></textarea>
             <button
               onClick={handleSend}

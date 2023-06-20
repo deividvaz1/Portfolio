@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 export function Hero() {
   const [text] = useTypewriter({
-    words: ['Dev Web', 'Design para Web', 'Dev Mobile'],
+    words: ['Desenvolvedor Web', 'Design para Web', 'Desenvolvedor Mobile'],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
@@ -48,7 +48,7 @@ export function Hero() {
           <h1 className="text-4xl font-semibold text-textColor">Deivid Vaz</h1>
           <p className="inline-block  px-5 font-alt text-sm uppercase leading-none text-designColor">
             {text}
-            <Cursor cursorBlinking="false" cursorStyle="|" />
+            <Cursor cursorBlinking={false} cursorStyle="|" />
           </p>
           <div className="mt-2 flex justify-center gap-2">
             <span className="cursor-pointer text-xl duration-300 hover:text-designColor">

@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  const ref = useRef()
+  const ref = useRef<HTMLDivElement>(null)
 
   const [about, setAbout] = useState(true)
   const [resume, setResume] = useState(false)
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.body.addEventListener('click', (e) => {
-      if (e.target.contains(ref.current)) {
+      if (e.target instanceof Element && e.target.contains(ref.current)) {
         setSidenav(false)
       }
     })
