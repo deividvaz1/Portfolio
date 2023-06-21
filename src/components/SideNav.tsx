@@ -5,9 +5,18 @@ export function SideNav() {
     <div className="px-7 py-4">
       <SideNavTitle title="M" subTitle="enu" />
       <ul>
-        <li className="sidenavLi">Meu portfólio</li>
+        <li className="sidenavLi">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/deividvaz1"
+          >
+            Meu GitHub
+          </a>
+        </li>
         <SideNavTitle title="P" subTitle="rojetos Hospedados" />
       </ul>
+
       <ul>
         <li className="sidenavLi">
           <a
