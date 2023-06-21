@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { FiMail, FiSend } from 'react-icons/fi'
+import { FiMail } from 'react-icons/fi'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import { useEffect, useState } from 'react'
 
@@ -61,12 +61,6 @@ export function Hero() {
               <FiMail />
             </span>
           </div>
-        </div>
-        {/* botões */}
-        <div className="flex h-14 justify-center">
-          <button className="borderAll flex h-full w-1/2 items-center justify-center gap-2 rounded-lg border-t-[1px] border-t-zinc-800 text-sm uppercase tracking-wide transition-colors duration-300 hover:scale-105 hover:border-cyan-300 hover:text-designColor hover:shadow-2xl">
-            Contate-me <FiSend />
-          </button>
         </div>
       </div>
     </div>

@@ -9,23 +9,23 @@ export function MyServices() {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
       <ServicesCard
         icons={<BiCodeAlt />}
-        title="Dev Web"
-        subTitle="lorem ipsum, dolor sit amet consectetur adipiscining elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        title="Desenvolvimento Web"
+        subTitle="Desenvolvimento web personalizado para criar sites interativos e funcionais. Utilizo as mais recentes tecnologias e frameworks para transformar muitas ideias em realidade, garantindo uma experiência íncrivel e de alto desempenho."
       />
       <ServicesCard
         icons={<SiAntdesign />}
         title="Design Web"
-        subTitle="lorem ipsum, dolor sit amet consectetur adipiscining elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        subTitle="Criação de designs web exclusivas e dinâmicas. Com habilidades em design, procuro sempre inovar, criando interfaces intuitivas e visualmente agradáveis."
       />
       <ServicesCard
         icons={<AiTwotoneAppstore />}
         title="Aplicativos Mobile"
-        subTitle="lorem ipsum, dolor sit amet consectetur adipiscining elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        subTitle="Desenvolvimento de aplicativos móveis personalizados para Android. Com foco na usabilidade e desempenho."
       />
       <ServicesCard
         icons={<FaAppStoreIos />}
-        title="Dev Front-End"
-        subTitle="lorem ipsum, dolor sit amet consectetur adipiscining elit. Hic, provident. Accusamus at dolorem expedita dicta."
+        title="Desenvolvimento Front-End"
+        subTitle="Desenvolvimento front-end especializado em criar interfaces interativas e responsivas. Utilizo as melhores práticas de codificação e as mais recentes tecnologias para construir experiências web modernas e envolventes."
       />
     </div>
   )

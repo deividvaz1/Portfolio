@@ -23,6 +23,7 @@ import { Projects } from '@/components/projects/Projects'
 import { Redes } from '@/components/redes/Redes'
 import { Email } from '@/components/email.tsx/Email'
 import { SideNav } from '@/components/SideNav'
+import { Contateme } from '@/components/Contateme'
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 
@@ -104,9 +105,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                         <SideNav />
                         <span
                           onClick={() => setSidenav(false)}
-                          className="absolute -right-16 top-0 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg bg-bodyColor text-2xl text-textColor duration-300 hover:text-designColor"
+                          className=" absolute -right-0 top-0 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-lg border border-red-50 bg-transparent text-2xl text-red-50 duration-300 hover:border-red-500 hover:text-red-500 "
                         >
-                          <MdOutlineClose />
+                          <MdOutlineClose className="" />
                         </span>
                       </motion.div>
                     </div>
@@ -200,6 +201,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 >
                   {/* Parte direita do portfólio */}
                   <Hero />
+                  <div className="flex h-14 justify-center">
+                    <Contateme
+                      onClick={() => {
+                        setAbout(false)
+                        setResume(false)
+                        setProjects(false)
+                        setRedes(false)
+                        setEmail(true)
+                      }}
+                    >
+                      Contate-me
+                    </Contateme>
+                  </div>
                 </div>
                 {/* Parte esquerda do portfólio */}
                 <div className="ml-12 h-[95%] w-8/12 rounded-2xl bg-transparent sm:-ml-0">
