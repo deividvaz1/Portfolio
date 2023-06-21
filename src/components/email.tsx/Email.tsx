@@ -73,7 +73,7 @@ export function Email() {
       <Title title="Entrar em" subTitle="Contato" />
       <div className="flex flex-col justify-between gap-4 p-6 sm:flex-row">
         <div className="w-full sm:w-1/2">
-          <p className="flex w-full flex-col justify-between border-b-[1px] border-b-gray-800 py-4 font-alt text-lg text-[#ccc] sm:flex sm:flex-row">
+          <p className="flex w-full flex-col justify-between border-b-[1px] border-b-gray-800 py-4 font-alt text-sm text-[#ccc] sm:flex sm:flex-row">
             <span className="flex items-center justify-center rounded-md bg-designColor px-2 font-alt text-sm font-medium text-gray-700">
               Email:
             </span>
@@ -81,11 +81,11 @@ export function Email() {
           </p>
         </div>
         <div className="w-full sm:w-1/2">
-          <p className="flex w-full flex-col justify-between border-b-[1px] border-b-gray-800 py-4 font-alt text-lg text-[#ccc] sm:flex sm:flex-row">
+          <p className="flex w-full flex-col justify-between border-b-[1px] border-b-gray-800 py-4 font-alt text-sm text-[#ccc] sm:flex sm:flex-row">
             <span className="flex items-center justify-center rounded-md bg-designColor px-2 font-alt text-sm font-medium text-gray-700">
               Telefone:
             </span>
-            (51)984840959
+            (51)98484-0959
           </p>
         </div>
       </div>
