@@ -10,9 +10,9 @@ export function AboutMe() {
             Sou um desenvolvedor web e mobile, atualmente trabalhando como
             desenvolvedor de software na empresa Ipé Saúde. Tenho experiência na
             criação de soluções eficientes e intuitivas, utilizando tecnologias
-            como HTML, CSS, JS, ReactJS, React Native e NodeJS. Busco
-            constantemente a criação de novos projetos inovadores para aplicar e
-            expandir meu conhecimento.
+            como ReactJS, React Native e NodeJS. Busco constantemente a criação
+            de novos projetos inovadores para aplicar e expandir meu
+            conhecimento.
           </p>
         </div>
       </div>
