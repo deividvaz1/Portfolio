@@ -79,7 +79,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="z-50 flex h-[85%] w-[85%] items-start justify-between rounded-2xl bg-bodyColor bg-opacity-70 text-white">
               {/* Navbar */}
               <div className=" flex h-96 w-16 flex-col gap-4">
-                <div className=" group flex h-20 w-full cursor-pointer items-center justify-center rounded-3xl bg-bodyColor bg-opacity-75">
+                <div className=" group flex h-20 w-full cursor-pointer items-center justify-center rounded-3xl bg-bodyColor bg-transparent">
                   {/* NAVBAR */}
                   <div
                     onClick={() => setSidenav(true)}
@@ -113,7 +113,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   </div>
                 )}
                 {/* SIDENAV */}
-                <div className="flex h-80 w-full flex-col items-center justify-between rounded-3xl bg-bodyColor bg-opacity-75 py-6">
+                <div className="flex h-80 w-full flex-col items-center justify-between rounded-3xl bg-bodyColor bg-transparent py-6">
                   <span
                     onClick={() => {
                       setAbout(true)
