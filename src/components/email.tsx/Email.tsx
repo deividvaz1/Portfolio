@@ -12,6 +12,7 @@ export function Email() {
   const [errUsuario, setErrUsuario] = useState(false)
   const [errEmail, setErrEmail] = useState(false)
   const [errMensagem, setErrMensagem] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [sucess, setSucess] = useState('')
 
   const EmailValidation = (email: any) => {
@@ -50,6 +51,8 @@ export function Email() {
     }
     if (usuario && email && EmailValidation(email) && mensagem) {
       try {
+        setLoading(true) // Inicia o loading
+
         await axios.post(
           'https://getform.io/f/6c3558c6-d73e-4df4-96ea-04017addb270',
           {
@@ -58,12 +61,15 @@ export function Email() {
             message: mensagem,
           },
         )
+
         setSucess(`${usuario}`)
         setUsuario('')
         setEmail('')
         setMensagem('')
       } catch (error) {
         console.error(error)
+      } finally {
+        setLoading(false) // Finaliza o loading
       }
     }
   }
@@ -90,7 +96,7 @@ export function Email() {
         </div>
       </div>
       <div className="mt-10 w-full">
-        <Title title="Entrar em" subTitle="Contato" />
+        <Title title="Enviar" subTitle="mensagem" />
         {sucess ? (
           <p className="p-6 text-center font-alt text-base text-designColor">
             Olá <span className="text-[#eee]">{sucess}</span>, sua mensagem foi
@@ -139,12 +145,18 @@ export function Email() {
               cols={30}
               rows={4}
             ></textarea>
-            <button
-              onClick={handleSend}
-              className="borderAll flex h-10 w-44 items-center justify-center gap-2 rounded-lg border-t-[1px] border-t-zinc-800 text-sm uppercase tracking-wide transition-colors duration-300 hover:scale-105 hover:border-cyan-300 hover:text-designColor hover:shadow-2xl"
-            >
-              Enviar Mensagem <span>{<FiSend className="h-5 w-5" />}</span>
-            </button>
+            {loading ? (
+              <div className="flex items-center justify-center">
+                <div className="h-4 w-4 animate-ping rounded-full bg-designColor"></div>
+              </div>
+            ) : (
+              <button
+                onClick={handleSend}
+                className="borderAll flex h-10 w-44 items-center justify-center gap-2 rounded-lg border-t-[1px] border-t-zinc-800 text-sm uppercase tracking-wide transition-colors duration-300 hover:scale-105 hover:border-cyan-300 hover:text-designColor hover:shadow-2xl"
+              >
+                Enviar Mensagem <span>{<FiSend className="h-5 w-5" />}</span>
+              </button>
+            )}
           </form>
         )}
       </div>

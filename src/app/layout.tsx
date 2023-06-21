@@ -202,7 +202,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <Hero />
                 </div>
                 {/* Parte esquerda do portfólio */}
-                <div className="bg-90 ml-12 h-[95%] w-8/12 rounded-2xl bg-transparent sm:-ml-0">
+                <div className="ml-12 h-[95%] w-8/12 rounded-2xl bg-transparent sm:-ml-0">
                   <div className="h-[96%] w-full overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
                     {/* Substituir o valor de children aqui */}
                     {about && (
