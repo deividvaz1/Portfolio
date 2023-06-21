@@ -10,9 +10,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Front-End:
 - Next.js | TypeScript | TailwindCSS | axios | framer-motion |
 
-Back-End:
-- Axios |
-
 ## 💻 Instalação
 
 ```bash
