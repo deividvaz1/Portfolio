@@ -12,7 +12,7 @@ export function Education() {
           badge="2022 - Atual"
           title="Desenvolvedor - Estagiário"
           subTitle="Ipe Saúde"
-          des="Lorem ipsa, dolorem sint. Pariatur alias amet nemo aspernatur hic, placeat nam commodi sed quas. Earum."
+          des="Estagiário de Desenvolvimento de Software no Ipe Saúde, tive a oportunidade de aprimorar meus conhecimentos em desenvolvimento web e mobile, com foco em tecnologias como ReactJS, React Native e Node.js.  Além disso, fiz uso durante o front-end de frameworks como Next.js e Tailwindcss."
         />
       </div>
       <div className="flex h-full w-full items-center justify-center">
@@ -24,7 +24,7 @@ export function Education() {
           badge="2021 - Atual"
           title="Análise de Sistemas"
           subTitle="Uniasselvi"
-          des="Lorem ipsa, dolorem sint. Pariatur alias amet nemo aspernatur hic, placeat nam commodi sed quas. Earum."
+          des="O curso tecnólogo em Análise e Desenvolvimento de Sistemas possibilita a atuação com consultoria ou desenvolvimento de softwares em empresas do setor público e privado, com destaque para os negócios da área de Tecnologia de Informação (TI) e de telecomunicações."
         />
       </div>
     </div>

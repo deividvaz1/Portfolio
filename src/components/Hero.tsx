@@ -6,6 +6,10 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import { useEffect, useState } from 'react'
 
 export function Hero() {
+  const handleEmailClick = () => {
+    window.open('mailto:deividvaz100@gmail.com')
+  }
+
   const [text] = useTypewriter({
     words: ['Desenvolvedor Web', 'Design para Web', 'Desenvolvedor Mobile'],
     loop: true,
@@ -52,13 +56,16 @@ export function Hero() {
           </p>
           <div className="mt-2 flex justify-center gap-2">
             <span className="cursor-pointer text-xl duration-300 hover:text-designColor">
-              <FaGithub />
+              <FaGithub className="h-7 w-7" />
             </span>
             <span className="cursor-pointer text-xl duration-300 hover:text-designColor">
-              <FaLinkedin />
+              <FaLinkedin className="h-7 w-7" />
             </span>
-            <span className="stext-xl cursor-pointer duration-300 hover:text-designColor">
-              <FiMail />
+            <span
+              className="stext-xl cursor-pointer duration-300 hover:text-designColor"
+              onClick={handleEmailClick}
+            >
+              <FiMail className="h-7 w-7" />
             </span>
           </div>
         </div>
