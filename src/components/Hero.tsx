@@ -56,10 +56,22 @@ export function Hero() {
           </p>
           <div className="mt-2 flex justify-center gap-2">
             <span className="cursor-pointer text-xl duration-300 hover:text-designColor">
-              <FaGithub className="h-7 w-7" />
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/deividvaz1"
+              >
+                <FaGithub className="h-7 w-7" />
+              </a>
             </span>
             <span className="cursor-pointer text-xl duration-300 hover:text-designColor">
-              <FaLinkedin className="h-7 w-7" />
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/deivid-vaz-13053622a/"
+              >
+                <FaLinkedin className="h-7 w-7" />
+              </a>
             </span>
             <span
               className="stext-xl cursor-pointer duration-300 hover:text-designColor"
