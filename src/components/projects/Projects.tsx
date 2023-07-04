@@ -2,6 +2,7 @@
 import ImageSrc from 'src/app/public/assets/layout-app-saude.png'
 import Spacetime from 'src/app/public/assets/memorias.png'
 import Restaurante from 'src/app/public/assets/restaurante.png'
+import Soccer from 'src/app/public/assets/soccer-formation.png'
 import { Title } from '../Title'
 import { ProjectCard } from './ProjectCard'
 
@@ -25,12 +26,12 @@ export function Projects() {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://github.com/deividvaz1/Projeto-NLW"
+            href="https://github.com/deividvaz1/soccer-formation"
           >
             <ProjectCard
-              title="Cápsula do tempo"
+              title="Simulador de escalação"
               category="Website Responsivo"
-              image={Spacetime} // substitua pelo caminho correto da sua imagem
+              image={Soccer} // substitua pelo caminho correto da sua imagem
             />
           </a>
         </div>
@@ -44,6 +45,11 @@ export function Projects() {
               title="Restaurante Fictício"
               category="Website Responsivo"
               image={Restaurante} // substitua pelo caminho correto da sua imagem
+            />
+            <ProjectCard
+              title="Cápsula do tempo"
+              category="Website Responsivo"
+              image={Spacetime} // substitua pelo caminho correto da sua imagem
             />
           </a>
         </div>

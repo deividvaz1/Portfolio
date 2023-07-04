@@ -12,7 +12,7 @@ export function AboutMe() {
             criação de soluções eficientes e intuitivas, utilizando tecnologias
             como ReactJS, React Native e NodeJS. Busco constantemente a criação
             de novos projetos inovadores para aplicar e expandir meu
-            conhecimento.
+            conhecimento. Desenvolvedor back e front
           </p>
         </div>
       </div>
