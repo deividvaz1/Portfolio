@@ -7,12 +7,11 @@ export function AboutMe() {
             Olá, meu nome é Deivid Vaz
           </h2>
           <p className="text-base font-normal leading-6">
-            Sou um desenvolvedor web e mobile, atualmente trabalhando como
-            desenvolvedor de software na empresa Ipé Saúde. Tenho experiência na
-            criação de soluções eficientes e intuitivas, utilizando tecnologias
-            como ReactJS, React Native e NodeJS. Busco constantemente a criação
-            de novos projetos inovadores para aplicar e expandir meu
-            conhecimento. Desenvolvedor back e front
+            Sou um desenvolvedor web e mobile. Tenho experiência na criação de
+            soluções eficientes e intuitivas, utilizando tecnologias como
+            ReactJS, React Native e NodeJS. Busco constantemente a criação de
+            novos projetos inovadores para aplicar e expandir meu conhecimento.
+            Desenvolvedor back e front
           </p>
         </div>
       </div>
