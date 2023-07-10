@@ -3,6 +3,7 @@ import ImageSrc from 'src/app/public/assets/layout-app-saude.png'
 import Spacetime from 'src/app/public/assets/memorias.png'
 import Restaurante from 'src/app/public/assets/restaurante.png'
 import Soccer from 'src/app/public/assets/soccer-formation.png'
+import Clima from 'src/app/public/assets/clima-tempo.png'
 import { Title } from '../Title'
 import { ProjectCard } from './ProjectCard'
 
@@ -21,6 +22,17 @@ export function Projects() {
               title="App Saúde"
               category="Aplicativo"
               image={ImageSrc}
+            />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/deividvaz1/clima-tempo"
+          >
+            <ProjectCard
+              title="Clima do Tempo"
+              category="Website Responsivo"
+              image={Clima} // substitua pelo caminho correto da sua imagem
             />
           </a>
           <a
@@ -46,6 +58,12 @@ export function Projects() {
               category="Website Responsivo"
               image={Restaurante} // substitua pelo caminho correto da sua imagem
             />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/deividvaz1/Projeto-NLW"
+          >
             <ProjectCard
               title="Cápsula do tempo"
               category="Website Responsivo"
