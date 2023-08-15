@@ -32,7 +32,7 @@ export function Projects() {
             <ProjectCard
               title="Clima do Tempo"
               category="Website Responsivo"
-              image={Clima} // substitua pelo caminho correto da sua imagem
+              image={Clima}
             />
           </a>
           <a
@@ -43,7 +43,7 @@ export function Projects() {
             <ProjectCard
               title="Simulador de escalação"
               category="Website Responsivo"
-              image={Soccer} // substitua pelo caminho correto da sua imagem
+              image={Soccer} 
             />
           </a>
         </div>
@@ -56,7 +56,7 @@ export function Projects() {
             <ProjectCard
               title="Restaurante Fictício"
               category="Website Responsivo"
-              image={Restaurante} // substitua pelo caminho correto da sua imagem
+              image={Restaurante}
             />
           </a>
           <a
@@ -67,7 +67,7 @@ export function Projects() {
             <ProjectCard
               title="Cápsula do tempo"
               category="Website Responsivo"
-              image={Spacetime} // substitua pelo caminho correto da sua imagem
+              image={Spacetime} 
             />
           </a>
         </div>
